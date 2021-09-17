@@ -4,6 +4,7 @@ This is a readme file containing instructions to modify the WRF-Hydro source cod
 
 ## Content in this directory
 1) Modified Fortran source code
+
 module_HYDRO_io.F   
 module_NWM_io.F
 module_NWM_io_dict.F   
@@ -15,4 +16,6 @@ Noah_distr_routing.F
 to substitute the existing files there.
 2) Compile and configure WRF-Hydro following https://ral.ucar.edu/sites/default/files/public/HowToBuildandRunWRF-HydroV5inStandaloneMode.pdf
 3) Copy the updated wrf_hydro.exe under RUN/ to the directory you plan to run WRF-Hydro
-4) Run WRF-Hydro as you normally do and the Q_SFCFLX_X and Q_SFCFLX_Y with unit of m^3/s will be stored in the *RTOUT* output files. 
+4) Run WRF-Hydro as you normally do. The overland flow at x and y directions Q_SFCFLX_X and Q_SFCFLX_Y with unit of ${m^3/s}$ will be stored in the YYYYMMDDHH.RTOUT_DOMAIN1 output files. 
+
+If you have questions, please direct them to chuxuanli2020@u.northwestern.edu
