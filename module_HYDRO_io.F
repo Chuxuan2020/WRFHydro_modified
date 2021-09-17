@@ -2147,7 +2147,7 @@ if ( (io_config_outputs .ge. 0) .and. (io_config_outputs .ne. 4) ) then
    q_sfcflx_x = q_sfcflx_x * dist(:,:,9) /dt
    call write_IO_rt_real(q_sfcflx_x,xdumd)
 #else
-   xdumd(:,:) = q_sfcflx_x(:,:) * * dist(:,:,9) /dt
+   xdumd(:,:) = q_sfcflx_x(:,:) * dist(:,:,9) /dt
 #endif
 #ifdef MPP_LAND
    if (my_id .eq. io_id) then
